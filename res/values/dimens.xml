@@ -1,0 +1,6 @@
+<resources>
+
+    <dimen name="min_distance_y">24dp</dimen>
+    <dimen name="max_distance_y">120dp</dimen>
+
+</resources>
