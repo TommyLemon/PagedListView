@@ -30,7 +30,7 @@ public class ListViewActivity extends Activity {
 
 	private ListView lvListView;
 	private List<String> list;
-	private PageScoller pageScoller;
+	private PageScroller pageScroller;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,8 +45,8 @@ public class ListViewActivity extends Activity {
 		
 		lvListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list));
 		
-		pageScoller = new PageScoller(lvListView);
-		pageScoller.init();
+		pageScroller = new PageScroller(lvListView);
+		pageScroller.init();
 	}
 	
 	/**
@@ -56,7 +56,7 @@ public class ListViewActivity extends Activity {
 	 */
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		pageScoller.dispatchTouchEvent(ev);
+		pageScroller.dispatchTouchEvent(ev);
 		return super.dispatchTouchEvent(ev);
 	}
 

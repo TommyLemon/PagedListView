@@ -10,7 +10,7 @@
      <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ListView等滚动位置经常不符合用户预期：很多时候都是看完一页想滑到下一页，但滑动一次距离往往不是不够就是超过。\n使用PageScoller可以在 中低速滑动 后会滚动一页，很慢滑动 或 很快滑动 则按默认处理。" />
+        android:text="ListView等滚动位置经常不符合用户预期：很多时候都是看完一页想滑到下一页，但滑动一次距离往往不是不够就是超过。\n使用PageScroller可以在 中低速滑动 后会滚动一页，很慢滑动 或 很快滑动 则按默认处理。" />
     
     <Button
         android:id="@+id/btnListView"

@@ -30,7 +30,7 @@ public class GridViewActivity extends Activity {
 
 	private GridView gvGridView;
 	private List<String> list;
-	private PageScoller pageScoller;
+	private PageScroller pageScroller;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,13 +45,13 @@ public class GridViewActivity extends Activity {
 		
 		gvGridView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list));
 		
-		pageScoller = new PageScoller(gvGridView);
-		pageScoller.init();
+		pageScroller = new PageScroller(gvGridView);
+		pageScroller.init();
 	}
 	
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent ev) {
-		pageScoller.dispatchTouchEvent(ev);
+		pageScroller.dispatchTouchEvent(ev);
 		return super.dispatchTouchEvent(ev);
 	}
 
