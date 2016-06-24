@@ -12,7 +12,7 @@ PagedListView工程中提供了PageScoller来解决这个问题。
 使用PageScoller可以在 中低速滑动 后会滚动一页，很慢滑动 或 很快滑动 则按默认处理。
 
  
-## 使用方法
+## Usage
 
 1.初始化PageScoller
 
