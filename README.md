@@ -1,5 +1,5 @@
 # PagedListView
-Scroll ListView faster and more accurate
+Scroll ListView faster, more accurate and comfortable.
 
 ListView等滚动位置经常不符合用户期望：
 
