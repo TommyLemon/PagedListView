@@ -16,22 +16,22 @@ PagedListView工程中提供了PageScoller来解决这个问题。
 
 1.初始化PageScoller
 
-pageScoller = new PageScoller(listView);
-pageScoller.init();
+    pageScoller = new PageScoller(listView);
+    pageScoller.init();
  
  
 2.重写dispatchTouchEvent方法
 
 在Activity的dispatchTouchEvent方法内 pageScoller.dispatchTouchEvent(ev); 具体如下：
 
-@Override
+    @Override
 
-public boolean dispatchTouchEvent(MotionEvent ev) {
+    public boolean dispatchTouchEvent(MotionEvent ev) {
  
-     pageScoller.dispatchTouchEvent(ev);
+         pageScoller.dispatchTouchEvent(ev);
  
-     return super.dispatchTouchEvent(ev);
-}
+         return super.dispatchTouchEvent(ev);
+    }
 
 
 
