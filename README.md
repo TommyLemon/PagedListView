@@ -14,25 +14,8 @@ PagedListView工程中提供了PageScoller来解决这个问题。
  
 ## Usage
 
-1.初始化PageScoller
-
-    pageScoller = new PageScoller(listView);
-    pageScoller.init();
+    new PageScoller(listView).init();
  
- 
-2.重写dispatchTouchEvent方法
-
-在Activity的dispatchTouchEvent方法内 pageScoller.dispatchTouchEvent(ev); 具体如下：
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
- 
-         pageScoller.dispatchTouchEvent(ev);
- 
-         return super.dispatchTouchEvent(ev);
-    }
-
-
 
 ## 欢迎Star，欢迎Fork
 
