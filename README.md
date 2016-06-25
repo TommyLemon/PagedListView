@@ -10,7 +10,7 @@ ListView等滚动位置经常不符合用户期望：
 PagedListView工程中提供了PageScoller来解决这个问题。
 
 使用PageScoller可以在 中低速滑动 后会滚动一页，很慢滑动 或 很快滑动 则按默认处理。
-
+![](http://static.oschina.net/uploads/img/201606/25222246_zFzs.png)
  
 ## Usage
 
