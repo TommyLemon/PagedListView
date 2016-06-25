@@ -14,14 +14,13 @@ limitations under the License.*/
 
 package zuo.biao.pagedlistview;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**ListView示例
  * @author Lemon
@@ -30,7 +29,6 @@ public class ListViewActivity extends Activity {
 
 	private ListView lvListView;
 	private List<String> list;
-	private PageScroller pageScroller;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,20 +42,8 @@ public class ListViewActivity extends Activity {
 		}
 		
 		lvListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list));
-		
-		pageScroller = new PageScroller(lvListView);
-		pageScroller.init();
-	}
-	
-	/**
-	 * Fragment中没有这个方法，可在Fragment内新建dispatchTouchEvent方法，
-	 * 然后在添加Fragment的Activity中重写dispatchTouchEvent方法，并在该方法内调用Fragment里的dispatchTouchEvent方法，
-	 * 即fragment.dispatchTouchEvent(ev);
-	 */
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent ev) {
-		pageScroller.dispatchTouchEvent(ev);
-		return super.dispatchTouchEvent(ev);
+
+		new PageScroller(lvListView).init();
 	}
 
 }

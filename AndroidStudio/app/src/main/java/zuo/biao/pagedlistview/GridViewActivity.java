@@ -14,14 +14,13 @@ limitations under the License.*/
 
 package zuo.biao.pagedlistview;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**GridView示例
  * @author Lemon
@@ -30,7 +29,6 @@ public class GridViewActivity extends Activity {
 
 	private GridView gvGridView;
 	private List<String> list;
-	private PageScroller pageScroller;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,15 +42,8 @@ public class GridViewActivity extends Activity {
 		}
 		
 		gvGridView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list));
-		
-		pageScroller = new PageScroller(gvGridView);
-		pageScroller.init();
-	}
-	
-	@Override
-	public boolean dispatchTouchEvent(MotionEvent ev) {
-		pageScroller.dispatchTouchEvent(ev);
-		return super.dispatchTouchEvent(ev);
+
+		new PageScroller(gvGridView).init();
 	}
 
 }
